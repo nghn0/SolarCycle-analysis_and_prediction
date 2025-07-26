@@ -175,7 +175,5 @@ The goal is to predict future SSN values using historical data. The approach inc
 - Incorporate exogenous variables
 - Implement hyperparameter tuning
 
-## Acknowledgments
 
-Data source: [Specify your data source if applicable]
 
