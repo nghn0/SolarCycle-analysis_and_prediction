@@ -100,3 +100,82 @@ The solar cycle is not only a fascinating phenomenon of astrophysics but also a 
 
 ---
 
+
+
+# Solar Sunspot Number (SSN) Time Series Forecasting with LSTM
+
+This project implements a Long Short-Term Memory (LSTM) neural network to forecast Solar Sunspot Numbers (SSN), which are important indicators of solar activity.
+
+## Project Overview
+
+The goal is to predict future SSN values using historical data. The approach includes:
+- Data preprocessing with MinMax scaling
+- Feature engineering with lagged variables
+- LSTM model architecture
+- Baseline model comparison
+- Performance evaluation using Mean Absolute Error (MAE)
+
+## Key Features
+
+- **Data Preparation**: Created lagged features (16 time steps) for time series forecasting
+- **Model Architecture**: 3-layer LSTM network with 32 units each
+- **Training Optimization**:
+  - Learning rate reduction on plateau
+  - Early stopping to prevent overfitting
+- **Evaluation**: Comparison against a simple baseline model
+
+## Results
+
+- Baseline MAE: [value from your baseline_mae]
+- LSTM MAE: 13.29 (inverse transformed)
+  
+![Prediction vs Actual Plot](prediction_plot.png) *(Replace with actual image path)*
+
+## Code Structure
+
+1. **Data Loading & Preprocessing**
+   - MinMax scaling applied to SSN values
+   - Partial autocorrelation analysis to determine lag length
+
+2. **Feature Engineering**
+   - `shift()` function creates lagged features for training set
+   - `shift_test()` function creates lagged features for test set
+
+3. **Model Building**
+   - Sequential LSTM model with 3 layers
+   - Adam optimizer with MSE loss function
+   - Callbacks for learning rate adjustment and early stopping
+
+4. **Evaluation**
+   - MAE calculation on inverse-transformed data
+   - Visual comparison of predictions vs actual values
+
+## Requirements
+
+- Python 3.x
+- Libraries:
+  - NumPy
+  - Pandas
+  - Matplotlib
+  - scikit-learn
+  - statsmodels
+  - TensorFlow/Keras
+
+## Usage
+
+1. Mount Google Drive (if using Colab)
+2. Load and preprocess your SSN data
+3. Run the model training cells
+4. Evaluate using the provided functions
+
+## Future Improvements
+
+- Experiment with different lag lengths
+- Try alternative architectures (GRU, ConvLSTM)
+- Incorporate exogenous variables
+- Implement hyperparameter tuning
+
+## Acknowledgments
+
+Data source: [Specify your data source if applicable]
+
