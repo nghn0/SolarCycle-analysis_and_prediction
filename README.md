@@ -129,7 +129,7 @@ The goal is to predict future SSN values using historical data. The approach inc
 - Baseline MAE: [value from your baseline_mae]
 - LSTM MAE: 13.29 (inverse transformed)
   
-![Prediction vs Actual Plot](prediction_plot.png) *(Replace with actual image path)*
+![Prediction vs Actual Plot](prediction_plot.png) 
 
 ## Code Structure
 
